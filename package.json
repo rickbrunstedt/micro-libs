@@ -1,0 +1,18 @@
+{
+  "name": "micro-libs",
+  "version": "0.0.1",
+  "description": "small libraries to copy-paste into projects",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.40",
+    "next": "^12.1.6",
+    "typescript": "^4.7.3"
+  }
+}
