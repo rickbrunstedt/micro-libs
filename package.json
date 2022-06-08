@@ -2,7 +2,11 @@
   "name": "micro-libs",
   "version": "0.0.1",
   "description": "small libraries to copy-paste into projects",
-  "main": "index.js",
+  "main": "dist/cli/index.js",
+  "bin": {
+    "ml": "dist/cli/index.js",
+    "micro-libs": "dist/cli/index.js"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsc -w"

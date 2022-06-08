@@ -1,10 +1,15 @@
-interface CliFlags {
+export interface CliFlags {
   [key: string]: string | number | boolean;
 }
 
-type CliInput = string[];
+export type CliInput = string[];
 
-export function getArgs() {
+export interface CliArgs {
+  input: CliInput;
+  flags: CliFlags;
+}
+
+export function getArgs(): CliArgs {
   const [, , ...args] = process.argv;
   const flags: CliFlags = {};
   const input: CliInput = [];
