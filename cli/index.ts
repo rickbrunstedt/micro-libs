@@ -64,10 +64,27 @@ function handleCopyFile(rootPath: string, files: Files, args: CliArgs) {
   }
 }
 
+const commandList = `
+  Micro Libs
+
+  Commands:
+    list, ls      List all libs
+    copy, cp      Copy lib to other folder.
+                  Input is either number from list or name of the file.
+                  Output is the location where the file should be copied.
+
+  flags:
+    --help, -h    Show this dialog
+`;
+
 function main() {
   const rootPath = getRootPath();
   const files = readFileList(rootPath);
   const args = getArgs();
+
+  if (args.flags.help || args.flags.h) {
+    console.log(commandList);
+  }
 
   switch (args.input[0]) {
     case "list":

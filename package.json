@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "postbuild": "chmod 766 dist/cli/index.js",
     "dev": "tsc -w"
   },
   "keywords": [],
