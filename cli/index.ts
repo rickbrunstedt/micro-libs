@@ -96,7 +96,7 @@ function main() {
       handleCopyFile(rootPath, files, args);
       return;
     default:
-      log.info("No matching command");
+      console.log(commandList);
       return;
   }
 }
